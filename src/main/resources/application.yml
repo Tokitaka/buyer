@@ -13,9 +13,9 @@ spring:
   sql:
     init:
       schema-locations:
-      
+      - classpath:db/table.sql
       data-locations:
-      
+      - classpath:db/data.sql
   h2:
     console:
       enabled: true
@@ -29,3 +29,5 @@ spring:
 mybatis:
   mapper-locations:
   - classpath:mapper/**.xml
+  configuration:
+    map-underscore-to-camel-case: true
