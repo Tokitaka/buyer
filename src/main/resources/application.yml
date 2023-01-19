@@ -4,6 +4,8 @@ server:
     encoding:
       charset: utf-8
       force: true
+    session:
+      timeout: 5
 spring:
   datasource:
     url: jdbc:h2:mem:test;MODE=MySQL
@@ -31,3 +33,4 @@ mybatis:
   - classpath:mapper/**.xml
   configuration:
     map-underscore-to-camel-case: true
+
