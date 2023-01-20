@@ -21,6 +21,13 @@ public class UserController {
     @Autowired
     private HttpSession session;
 
+    @GetMapping("/logOut")
+    public String logout() {
+        session.invalidate(); // 세션 초기화
+
+        return "redirect:/";
+    }
+
     @GetMapping("/joinForm")
     public String joinForm() {
         return "user/joinForm";
